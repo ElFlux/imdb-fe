@@ -24,12 +24,13 @@ const Register = () => {
 
         console.log(data)
 
-        const res = await axios.post(url, data)
+        let res = await axios.post(url, data)
+
+        console.log(res)
 
         if (res.status === 201) {
             setRedirect(true)
         }
-
 
     }
 
